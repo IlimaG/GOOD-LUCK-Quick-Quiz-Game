@@ -1,87 +1,87 @@
-Good Luck/
-├─ node_modules/
-├─ public/
-│  ├─ favicon.ico
-│  ├─ index.html
-├─ src/
-│  ├─ assets/
-│  │  ├─ imgs/
-│  │  ├─ music/
-│  ├─ components/
-│  │  ├─ Answer/
-│  │  │  ├─ Answer.css
-│  │  │  ├─ Answer.jsx
-│  │  ├─ Ask/
-│  │  │  ├─ Ask.jsx
-│  │  │  ├─ Ask.jsx
-│  │  ├─ Button/
-│  │  │  ├─ ClassicButton/
-│  │  │  │  ├─ ClassicButton.jsx
-│  │  │  ├─ LinkButton/
-│  │  │  │  ├─ LinkButton.jsx
-│  │  │  ├─ Button.css
-│  │  ├─ Classification/
-│  │  │  ├─ Classification.css
-│  │  │  ├─ Classification.jsx
-│  │  ├─ CompetitivePopUp/
-│  │  │  ├─ CompetitivePopUp.css
-│  │  │  ├─ CompetitivePopUp.jsx
-│  │  ├─ CustomizeGame/
-│  │  │  ├─ CustomizeGame.css
-│  │  │  ├─ CustomizeGame.jsx
-│  │  ├─ Error-CorrectAsk/
-│  │  │  ├─ Error-CorrectAsk.css
-│  │  │  ├─ Error-CorrectAsk.jsx
-│  │  ├─ HowToPlayPopUp/
-│  │  │  ├─ HowToPlayPopUp.css/
-│  │  │  ├─ HowToPlayPopUp.jsx
-│  │  ├─ Logo/
-│  │  │  ├─ Logo.css
-│  │  │  ├─ Logo.jsx
-│  │  ├─ PointsCounter/
-│  │  │  ├─ PointsCounter.css
-│  │  │  ├─ PointsCounter.jsx
-│  │  ├─ Settings/
-│  │  │  ├─ Settings.css
-│  │  │  ├─ Settings.jsx
-│  │  ├─ Timer/
-│  │  │  ├─ Timer.css
-│  │  │  ├─ Timer.jsx
-│  │  ├─ trainingPopUp/
-│  │  │  ├─ trainingPopUp.css
-│  │  │  ├─ trainingPopUp.jsx
-│  │  ├─ TrueFalse/
-│  │  │  ├─ TrueFalse.css
-│  │  │  ├─ TrueFalse.jsx
-│  ├─ context/
-│  │  ├─ PointsContex.jsx
-│  │  ├─ QuestionsContex.jsx
-│  │  ├─ SettingsContex.jsx
-│  ├─ pages/
-│  │  ├─ ClassicGame/
-│  │  │  ├─ ClassicGame.jsx
-│  │  │  ├─ CustomizeGame.css
-│  │  ├─ Classification/
-│  │  │  ├─ Classification.css
-│  │  │  ├─ Classification.jsx
-│  │  ├─ CustomGame/
-│  │  │  ├─ CustomGame.css/
-│  │  │  ├─ CustomGame.jsx/
-│  │  ├─ CustomizeGame/
-│  │  │  ├─ CustomizeGame.css
-│  │  │  ├─ CustomizeGame.jsx
-│  │  ├─ HomePage/
-│  │  │  ├─ HomePage.css
-│  │  │  ├─ HomePage.jsx
-│  │  ├─ HowToPlay/
-│  │  │  ├─ HowToPlay.css
-│  │  │  ├─ HowToPlay.jsx
-│  ├─ App.css
-│  ├─ App.jsx
-│  ├─ index.css
-│  ├─ index.js
-├─ .gitignore
-├─ package.json
+Good Luck/ <br>
+├─ node_modules/<br>
+├─ public/<br>
+│  ├─ favicon.ico<br>
+│  ├─ index.html<br>
+├─ src/<br>
+│  ├─ assets/<br>
+│  │  ├─ imgs/<br>
+│  │  ├─ music/<br>
+│  ├─ components/<br>
+│  │  ├─ Answer/<br>
+│  │  │  ├─ Answer.css<br>
+│  │  │  ├─ Answer.jsx<br>
+│  │  ├─ Ask/<br>
+│  │  │  ├─ Ask.jsx<br>
+│  │  │  ├─ Ask.jsx<br>
+│  │  ├─ Button/<br>
+│  │  │  ├─ ClassicButton/<br>
+│  │  │  │  ├─ ClassicButton.jsx<br>
+│  │  │  ├─ LinkButton/<br>
+│  │  │  │  ├─ LinkButton.jsx<br>
+│  │  │  ├─ Button.css<br>
+│  │  ├─ Classification/<br>
+│  │  │  ├─ Classification.css<br>
+│  │  │  ├─ Classification.jsx<br>
+│  │  ├─ CompetitivePopUp/<br>
+│  │  │  ├─ CompetitivePopUp.css<br>
+│  │  │  ├─ CompetitivePopUp.jsx<br>
+│  │  ├─ CustomizeGame/<br>
+│  │  │  ├─ CustomizeGame.css<br>
+│  │  │  ├─ CustomizeGame.jsx<br>
+│  │  ├─ Error-CorrectAsk/<br>
+│  │  │  ├─ Error-CorrectAsk.css<br>
+│  │  │  ├─ Error-CorrectAsk.jsx<br>
+│  │  ├─ HowToPlayPopUp/<br>
+│  │  │  ├─ HowToPlayPopUp.css/<br>
+│  │  │  ├─ HowToPlayPopUp.jsx<br>
+│  │  ├─ Logo/<br>
+│  │  │  ├─ Logo.css<br>
+│  │  │  ├─ Logo.jsx<br>
+│  │  ├─ PointsCounter/<br>
+│  │  │  ├─ PointsCounter.css<br>
+│  │  │  ├─ PointsCounter.jsx<br>
+│  │  ├─ Settings/<br>
+│  │  │  ├─ Settings.css<br>
+│  │  │  ├─ Settings.jsx<br>
+│  │  ├─ Timer/<br>
+│  │  │  ├─ Timer.css<br>
+│  │  │  ├─ Timer.jsx<br>
+│  │  ├─ trainingPopUp/<br>
+│  │  │  ├─ trainingPopUp.css<br>
+│  │  │  ├─ trainingPopUp.jsx<br>
+│  │  ├─ TrueFalse/<br>
+│  │  │  ├─ TrueFalse.css<br>
+│  │  │  ├─ TrueFalse.jsx<br>
+│  ├─ context/<br>
+│  │  ├─ PointsContex.jsx<br>
+│  │  ├─ QuestionsContex.jsx<br>
+│  │  ├─ SettingsContex.jsx<br>
+│  ├─ pages/<br>
+│  │  ├─ ClassicGame/<br>
+│  │  │  ├─ ClassicGame.jsx<br>
+│  │  │  ├─ CustomizeGame.css<br>
+│  │  ├─ Classification/<br>
+│  │  │  ├─ Classification.css<br>
+│  │  │  ├─ Classification.jsx<br>
+│  │  ├─ CustomGame/<br>
+│  │  │  ├─ CustomGame.css/<br>
+│  │  │  ├─ CustomGame.jsx/<br>
+│  │  ├─ CustomizeGame/<br>
+│  │  │  ├─ CustomizeGame.css<br>
+│  │  │  ├─ CustomizeGame.jsx<br>
+│  │  ├─ HomePage/<br>
+│  │  │  ├─ HomePage.css<br>
+│  │  │  ├─ HomePage.jsx<br>
+│  │  ├─ HowToPlay/<br>
+│  │  │  ├─ HowToPlay.css<br>
+│  │  │  ├─ HowToPlay.jsx<br>
+│  ├─ App.css<br>
+│  ├─ App.jsx<br>
+│  ├─ index.css<br>
+│  ├─ index.js<br>
+├─ .gitignore<br>
+├─ package.json<br>
 
 
 # Getting Started with Create React App
