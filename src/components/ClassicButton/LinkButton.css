@@ -1,0 +1,200 @@
+/* COLOR PINK */
+
+.btnPink {
+    padding: 0.8em 2em 0.8em 2.5em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    color: #fff6fb;
+    letter-spacing: 0.8em;
+    text-shadow: -2px 2px 5px #FD3084;
+    background-color: transparent;
+    border: 2px solid #FEB1DE;
+    box-shadow: 0 0 0px 1px #F11271,
+        0 0 10px 2px #FD3084,
+        inset 0 0 0px 1px #F11271,
+        inset 0 0 10px 2px #FD3084;
+    transition: 100ms;
+}
+
+.btnPink:hover {
+    box-shadow: 0 0 0px 1px #F11271,
+        0 0 10px 2px #FD3084,
+        inset 0 0 0px 1px #F11271,
+        inset 0 0 30px 2px #FD3084;
+    text-shadow: 0 0 10px #FD3084;
+    transform: translateY(-5px);
+}
+
+.btnPink:active {
+    box-shadow: 0 0 0px 1px #F11271,
+        0 0 25px 2px #FD3084,
+        inset 0 0 0px 1px #F11271,
+        inset 0 0 30px 2px #FD3084;
+    transform: translateY(1px);
+}
+
+.btnPink a {
+    color: #fff6fb;
+}
+
+/* COLOR GREEN */
+
+.btnGreen {
+    padding: 0.8em 2em 0.8em 2.5em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    color: #fff6fb;
+    letter-spacing: 0.8em;
+    text-shadow: -2px 2px 5px #5aae39;
+    background-color: transparent;
+    border: 2px solid #b3ff95;
+    box-shadow: 0 0 0px 1px #47892d,
+        0 0 10px 2px #5aae39,
+        inset 0 0 0px 1px #47892d,
+        inset 0 0 10px 2px #5aae39;
+    transition: 100ms;
+}
+
+.btnGreen:hover {
+    box-shadow: 0 0 0px 1px #47892d,
+        0 0 10px 2px #5aae39,
+        inset 0 0 0px 1px #47892d,
+        inset 0 0 30px 2px #5aae39;
+    text-shadow: 0 0 10px #5aae39;
+    transform: translateY(-5px);
+}
+
+.btnGreen:active {
+    box-shadow: 0 0 0px 1px #47892d,
+        0 0 25px 2px #5aae39,
+        inset 0 0 0px 1px #47892d,
+        inset 0 0 30px 2px #5aae39;
+    transform: translateY(1px);
+}
+
+.btnGreen a {
+    color: #fff6fb;
+}
+
+/* COLOR YELLOR */
+
+.btnYellow {
+    padding: 0.8em 2em 0.8em 2.5em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    color: #fff6fb;
+    letter-spacing: 0.8em;
+    text-shadow: -2px 2px 5px #fceb00;
+    background-color: transparent;
+    border: 2px solid #fcf593;
+    box-shadow: 0 0 0px 1px #aba110,
+        0 0 10px 2px #fceb00,
+        inset 0 0 0px 1px #aba110,
+        inset 0 0 10px 2px #fceb00;
+    transition: 100ms;
+}
+
+.btnYellow:hover {
+    box-shadow: 0 0 0px 1px #aba110,
+        0 0 10px 2px #fceb00,
+        inset 0 0 0px 1px #aba110,
+        inset 0 0 30px 2px #fceb00;
+    text-shadow: 0 0 10px #fceb00;
+    transform: translateY(-5px);
+}
+
+.btnYellow:active {
+    box-shadow: 0 0 0px 1px #aba110,
+        0 0 25px 2px #fceb00,
+        inset 0 0 0px 1px #aba110,
+        inset 0 0 30px 2px #fceb00;
+    transform: translateY(1px);
+}
+
+.btnYellow a {
+    color: #fff6fb;
+}
+
+/* COLOR AZUL */
+
+.btnBlue {
+    padding: 0.8em 2em 0.8em 2.5em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    color: #fff6fb;
+    letter-spacing: 0.8em;
+    text-shadow: -2px 2px 5px #009bde;
+    background-color: transparent;
+    border: 2px solid #84c1db;
+    box-shadow: 0 0 0px 1px #04425c,
+        0 0 10px 2px #009bde,
+        inset 0 0 0px 1px #04425c,
+        inset 0 0 10px 2px #009bde;
+    transition: 100ms;
+}
+
+.btnBlue:hover {
+    box-shadow: 0 0 0px 1px #04425c,
+        0 0 10px 2px #009bde,
+        inset 0 0 0px 1px #04425c,
+        inset 0 0 30px 2px #009bde;
+    text-shadow: 0 0 10px #009bde;
+    transform: translateY(-5px);
+}
+
+.btnBlue:active {
+    box-shadow: 0 0 0px 1px #04425c,
+        0 0 25px 2px #009bde,
+        inset 0 0 0px 1px #04425c,
+        inset 0 0 30px 2px #009bde;
+    transform: translateY(1px);
+}
+
+.btnBlue a {
+    color: #fff6fb;
+}
+
+/* COLOR MORADO */
+
+.btnPurple {
+    width:fit-content ;
+    padding: 0.8em 2em 0.8em 2.5em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 15px;
+    color: #fff6fb;
+    letter-spacing: 0.8em;
+    text-shadow: -2px 2px 5px #d259e5 ;
+    background-color: transparent;
+    border: 2px solid #f1d0f6;
+    box-shadow: 0 0 0px 1px #61286a,
+        0 0 10px 2px #e749ff,
+        inset 0 0 0px 1px #61286a,
+        inset 0 0 10px 2px #d259e5 ;
+    transition: 100ms;
+}
+
+.btnPurple:hover {
+    box-shadow: 0 0 0px 1px #61286a,
+        0 0 10px 2px #e749ff,
+        inset 0 0 0px 1px #61286a,
+        inset 0 0 30px 2px #d259e5 ;
+    text-shadow: 0 0 10px #d259e5 ;
+    transform: translateY(-5px);
+}
+
+.btnPurple:active {
+    box-shadow: 0 0 0px 1px #61286a,
+        0 0 25px 2px #d259e5 ,
+        inset 0 0 0px 1px #61286a,
+        inset 0 0 30px 2px #d259e5;
+    transform: translateY(1px);
+}
+
+.btnPurple a {
+    color: #fff6fb;
+}

@@ -1,0 +1,21 @@
+#HomePage {
+    padding: 40px;
+}
+
+
+#btnHome {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+#btnHome button{
+    max-width: fit-content;
+}
+
+.logo {
+    margin-top: -100px;
+    height: 30%;
+}

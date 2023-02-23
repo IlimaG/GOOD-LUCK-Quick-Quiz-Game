@@ -1,0 +1,295 @@
+#SettingsPopUp {
+    padding: 2%;
+    position: fixed;
+    width: 97%;
+    height: 100%;
+    background-color: rgba(17, 19, 19, 0.823);
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: all ease-in-out 1s;
+}
+
+#musicSettings {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+    justify-content: center;
+}
+
+#musicSettings label {
+    font-size: 1em;
+}
+
+.muteMusic {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#cardsColors {
+    width: 100%;
+    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#cardsColors div {
+    width: 98%;
+    height: 220px;
+}
+
+#cardsColors input[type=color] {
+    height: 180px;
+    width: 96%;
+    text-decoration: none;
+    border: none;
+    opacity: 0;
+}
+
+#cardsColors span {
+    position: relative;
+    top: -57%;
+}
+
+#closeSettings {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background-color: transparent;
+    border: none;
+    color: #f0f0f0;
+    font-size:1.5rem ;
+}
+
+#closeSettings:hover{
+    scale: 1.5;
+}
+
+.MusicCheckbox input {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.MusicCheckbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 25px;
+    user-select: none;
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background: red;
+    border-radius: 50px;
+    transition: all 0.7s;
+    --spread: 20px;
+}
+
+.MusicCheckbox input:checked~.checkmark {
+    background: black;
+    box-shadow: -10px -10px var(--spread) 0px #FD3084, 0 -10px var(--spread) 0px #5aae39, 10px -10px var(--spread) 0px #5aae39, 10px 0 var(--spread) 0px #fceb00, 10px 10px var(--spread) 0px #fceb00, 0 10px var(--spread) 0px #009bde, -10px 10px var(--spread) 0px #009bde;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.MusicCheckbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.MusicCheckbox .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid #f0f0f0;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
+
+input[type=range] {
+    width: 100%;
+    margin: 13.05px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: rgba(0, 113, 169, 0.78);
+    background: rgb(90, 174, 57);
+    background: radial-gradient(circle, rgba(90, 174, 57, 1) 0%, rgba(253, 48, 132, 1) 73%, rgba(252, 235, 0, 1) 100%);
+    border: 0.2px solid radial-gradient(circle, rgba(90, 174, 57, 1) 0%, rgba(253, 48, 132, 1) 73%, rgba(252, 235, 0, 1) 100%);
+    width: 100%;
+    height: 0.9px;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -13.25px;
+    width: 26px;
+    height: 27px;
+    background: #ffffff;
+    border: 1.8px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+
+
+input[type=range]::-moz-range-track {
+    background: rgba(0, 113, 169, 0.78);
+    border: 0.2px solid white;
+    width: 100%;
+    height: 0.9px;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 26px;
+    height: 27px;
+    background: #ffffff;
+    border: 1.8px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 13.95px 0;
+    color: transparent;
+    width: 100%;
+    height: 0.9px;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #006ea4;
+    border: 0.2px solid white;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: rgba(0, 113, 169, 0.78);
+    border: 0.2px solid white;
+}
+
+input[type=range]::-ms-thumb {
+    width: 26px;
+    height: 27px;
+    background: #ffffff;
+    border: 1.8px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: rgba(0, 113, 169, 0.78);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #0074ae;
+}
+
+@supports (-ms-ime-align:auto) {
+    input[type=range] {
+        margin: 0;
+    }
+}
+
+#selectSong {
+    padding: 10px;
+    background-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    color: #f0f0f0;
+    appearance: none;
+    text-align: center;
+    border-image: linear-gradient(to right, #FD3084, #5aae39, #fceb00, #009bde) 1;
+}
+
+#selectSong:focus {
+    outline: none;
+}
+
+#selectSong option {
+    padding: 10px;
+    border-style: solid;
+    color: black;
+    appearance: none;
+    text-align: center;
+}
+
+#cardColorsScroll {
+    height: 70%;
+    overflow-y: scroll;
+}
+
+#cardColorsScroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+#cardColorsScroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#cardColorsScroll::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+
+#colorTrueFalse {
+    gap: 50px;
+    display: flex;
+    width: 99%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#colorTrueFalse div {
+    height: 430px;
+    width: 96%;
+}
+
+
+#colorTrueFalse input[type=color] {
+    height: 430px;
+    width: 96%;
+    text-decoration: none;
+    border: none;
+    opacity: 0;
+    margin-top: -17px;
+    z-index: -2;
+}
+
+#colorTrueFalse span {
+    position: relative;
+    top: -250px;
+    letter-spacing: 10px;
+    font-weight: 900;
+    font-size: 2rem;
+}
