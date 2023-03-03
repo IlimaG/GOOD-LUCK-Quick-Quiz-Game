@@ -1,0 +1,67 @@
+#ErrorCorrectAsk {
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    font-size: 100px;
+    font-weight: 400;
+    letter-spacing: 50px;
+}
+
+
+@keyframes incorrect {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #c501e2,
+            0 0 80px #c501e2,
+            0 0 90px #c501e2,
+            0 0 100px #c501e2,
+            0 0 150px #c501e2;
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+
+@keyframes winner {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #abe295,
+            0 0 80px #7dc261,
+            0 0 90px #5aae39,
+            0 0 100px #478a2d,
+            0 0 150px #2e7114;
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}

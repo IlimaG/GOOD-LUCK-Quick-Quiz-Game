@@ -9,7 +9,7 @@ const CompetitivePopUp = () => {
 
     return (
         <div id='CompetitivePopUp' style={{ left: competitivePopUp }}>
-            <button onClick={() => setCompetitivePopUp('-2000px')}>X</button>
+            <button onClick={() => setCompetitivePopUp('-100%')}>X</button>
             <div id='CompetitivePopUpBtn'>
                 <div className='btnPurple'>
                 <Link to={'/classicGame'}>CLASSIC GAME</Link>

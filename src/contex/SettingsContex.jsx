@@ -4,7 +4,7 @@ const SettingsContex = createContext()
 
 const SettingsContexProvider = ({ children }) => {
 
-    const [showSettings, setShowSettings] = useState('-2000px')
+    const [showSettings, setShowSettings] = useState('-110%')
 
     const [muteMusic, setMuteMusic] = useState(true)
     const [audio, setAudio] = useState(new Audio(audioPrincipal))

@@ -34,7 +34,7 @@ const SettingsPopUp = () => {
     const handleFalseColor4Input = (e) => setFalseColor(e.target.value)
 
     const closeSEttings = () => {
-        setShowSettings('-2000px')
+        setShowSettings('-110%')
     }
 
     return (
@@ -74,6 +74,7 @@ const SettingsPopUp = () => {
             <h3>Color of Responses</h3>
             <div id='cardColorsScroll'>
                 <div id='cardsColors'>
+
                     <Ask
                         rgba={color1}
                         text={<input type='color' id="color1" defaultValue={color1} onChange={handleColor1Input} />}

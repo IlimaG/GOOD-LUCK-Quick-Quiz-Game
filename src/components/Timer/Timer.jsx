@@ -1,41 +1,45 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { QuestionsContex } from '../../contex/QuestionsContex'
 import './Timer.css'
 
 const Timer = (props) => {
-    const { time } = props
 
-    const [countDown, setCountDown] = useState(time)
-    const [countDownControl, setCountDownControl] = useState(false)
+    const { correctOrError, time } = props
+    const [color, setColor] = useState('white')
+    const [timeOut, setTimeOut] = useState('white')
+    const { setIsTime, setPoints, countDown, setCountDown, isTime, isWinner } = useContext(QuestionsContex)
 
-    const countTime = () => {
-
-        let timeRound = time
-        let count = timeRound
-        let subtract
-
-        if (!count === 0) {
-            subtract = setInterval(() => {
-                count--
-                setCountDown(count)
-            }, 1000)
-        } else {
-            clearInterval(subtract)
-        }
-
-
-        
-
-    }
 
     useEffect(() => {
-        countTime()
-    }, [])
+        const timer =
+            countDown > 0 && isTime && setInterval(() => setCountDown(countDown - 1), 1000);
+
+        return () => clearInterval(timer);
+    }, [countDown, correctOrError]);
+
+    useEffect(() => {
+        if (countDown === 0) {
+            setIsTime(false)
+            setTimeout(() => setCountDown(time), 2500)
+        } else {
+            setIsTime(true)
+        }
+
+        countDown < 11 ? setColor('red') : setColor('white')
+        countDown < 11 ? setTimeOut('timeout') : setTimeOut('')
+
+    }, [countDown])
 
 
-
+    useEffect(() => {
+        setCountDown(time)
+        isWinner && setPoints(prev => prev + countDown)
+    }, [correctOrError])
 
     return (
-        <div id='countDown'>
+        <div id='countDown' className={timeOut} style={{
+            color: color,
+        }}>
             <h3>{countDown}</h3>
         </div>
     )

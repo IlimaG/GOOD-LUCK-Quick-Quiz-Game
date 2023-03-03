@@ -1,7 +1,7 @@
 import './LinkButton.css'
 
 const ClassicButton = (props) => {
-    const { text, color, onClick } = props
+    const { text, color } = props
 
     
     // colors : .btnPink, .btnGreen, .btnYellow, .btnBlue

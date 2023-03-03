@@ -9,13 +9,13 @@ const TrainingPopUp = () => {
 
     return (
         <div id='TrainingPopUp' style={{ bottom: trainingPopUp }}>
-            <button onClick={() => setTrainingPopUp('-2000px')}>X</button>
+            <button onClick={() => setTrainingPopUp('-100%')}>X</button>
             <div id='TrainingPopUpBtn'>
-                <div className='btnPurple'>
+                <div className='btnPurple' onClick={() => setTrainingPopUp('-100%')}>
                 <Link to={'/classicGame'}>CLASSIC GAME</Link>
                 </div>
 
-                <div className='btnPurple'>
+                <div className='btnPurple' onClick={() => setTrainingPopUp('-100%')}>
                 <Link to={'/customGame'}>CUSTOM GAME</Link>
                 </div>
                 

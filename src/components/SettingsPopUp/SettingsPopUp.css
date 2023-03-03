@@ -24,50 +24,92 @@
 .muteMusic {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 1%;
 }
 
 #cardsColors {
+    padding-top:20px ;
     width: 100%;
+    height: 100%;
     gap: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     align-items: center;
-    margin-bottom: 40px;
+    align-self: center;
 }
 
 #cardsColors div {
     width: 98%;
-    height: 220px;
+    height: 100%;
+}
+
+#cardsColors p {
+    height: 100%;
+    width: 100%;
 }
 
 #cardsColors input[type=color] {
-    height: 180px;
-    width: 96%;
     text-decoration: none;
     border: none;
     opacity: 0;
+    position: relative;
+    top: 5%;
+    width: 102%;
+    height: 100%;
 }
 
 #cardsColors span {
+
+    /* width: 110%; */
+    position: relative; 
+    top: -45%;
+}
+
+#colorTrueFalse {
+    gap: 50px;
+    display: flex;
+    width: 99%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+
+#colorTrueFalse div {
+    height: 75%;
+    width: 96%;
+}
+
+#colorTrueFalse input[type=color] {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
     position: relative;
-    top: -57%;
+    top: 5%;
+}
+
+#colorTrueFalse span {
+    position: relative; 
+    top: -45%;
+    letter-spacing: 10px;
+    font-weight: 900;
+    font-size: 2rem;
 }
 
 #closeSettings {
-    width: 40px;
-    height: 40px;
+    width: 2%;
+    height: 2%;
     position: absolute;
     top: 20px;
     right: 40px;
     background-color: transparent;
     border: none;
     color: #f0f0f0;
-    font-size:1.5rem ;
+    font-size: 1.5rem;
 }
 
-#closeSettings:hover{
+#closeSettings:hover {
     scale: 1.5;
 }
 
@@ -260,36 +302,6 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 
-#colorTrueFalse {
-    gap: 50px;
-    display: flex;
-    width: 99%;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-#colorTrueFalse div {
-    height: 430px;
-    width: 96%;
-}
 
 
-#colorTrueFalse input[type=color] {
-    height: 430px;
-    width: 96%;
-    text-decoration: none;
-    border: none;
-    opacity: 0;
-    margin-top: -17px;
-    z-index: -2;
-}
 
-#colorTrueFalse span {
-    position: relative;
-    top: -250px;
-    letter-spacing: 10px;
-    font-weight: 900;
-    font-size: 2rem;
-}

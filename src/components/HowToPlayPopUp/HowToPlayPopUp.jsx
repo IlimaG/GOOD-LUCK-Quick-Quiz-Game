@@ -9,7 +9,7 @@ const HowToPlayPopUp = () => {
 
     return (
         <div id='HowToPlayPopUp' style={{ right: howToPlay }}>
-            <button onClick={() => setHowToPlay('-2000px')}>X</button>
+            <button onClick={() => setHowToPlay('-100%')}>X</button>
             <div id='HowToPlayPopUpInfo'>
                 <div>
                     <h3 id='trainningInfo'>TRAINNING</h3>

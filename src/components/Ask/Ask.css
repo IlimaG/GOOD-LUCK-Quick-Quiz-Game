@@ -11,5 +11,7 @@
   font-size: 1.4rem;
 }
 .card-info {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }

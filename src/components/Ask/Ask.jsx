@@ -1,9 +1,9 @@
-import { hover } from '@testing-library/user-event/dist/hover'
 import { useState } from 'react';
 import './Ask.css'
 
 
-const Ask = ({ rgba, text, text2 }) => {
+const Ask = (props) => {
+    const { rgba, text, text2 } = props
 
     const [isHover, setIsHover] = useState(false);
 
@@ -27,13 +27,12 @@ const Ask = ({ rgba, text, text2 }) => {
                 border: `2px solid ${rgba}`,
                 boxShadow: `2px 2px 15px ${boxStyle} inset`,
             }}
-
         >
             <div className="card-info"
                 style={{
                     color: textStyle
                 }}>
-                <p>{text}</p>
+                {text}
                 <span>{text2}</span>
             </div>
         </div >
