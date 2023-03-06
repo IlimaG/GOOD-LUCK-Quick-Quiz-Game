@@ -10,7 +10,7 @@ const QuestionsContexProvider = ({ children }) => {
     const [allAnswer, setAllAnswer] = useState([])
     const [isWinner, setIsWinner] = useState(null)
     const [isTime, setIsTime] = useState(true)
-    const [points, setPoints] = useState(0)
+
     const [countDown, setCountDown] = useState(30)
 
     return (
@@ -22,7 +22,6 @@ const QuestionsContexProvider = ({ children }) => {
             allAnswer, setAllAnswer,
             isWinner, setIsWinner,
             isTime, setIsTime,
-            points, setPoints,
             countDown, setCountDown
             }}>
                 

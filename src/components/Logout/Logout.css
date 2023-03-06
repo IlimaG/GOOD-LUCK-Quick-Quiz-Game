@@ -1,0 +1,15 @@
+#logout {
+    position: fixed;
+    right: 20px;
+    top: 70px;
+    background-color: transparent;
+    border: none;
+}
+
+#logout img {
+    width: 37px;
+}
+
+#logout:hover{
+    scale: 1.2;
+}

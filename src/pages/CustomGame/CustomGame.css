@@ -1,0 +1,64 @@
+#CustomGame {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#CustomGame input {
+    padding: 30px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border-width: 5px;
+    border-style: solid;
+    color: #f0f0f0;
+    appearance: none;
+    text-align: center;
+    border-image: linear-gradient(to right, #FD3084, #5aae39, #fceb00, #009bde) 1;
+}
+
+#CustomGame input{
+    padding: 30px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border-width: 5px;
+    border-style: solid;
+    color: #f0f0f0;
+    appearance: none;
+    text-align: center;
+    border-image: linear-gradient(to right, #FD3084, #5aae39, #fceb00, #009bde) 1;
+}
+
+#CustomGame label {
+    color: white;
+    font-family:fantasy;
+    margin-bottom: -30px;
+}
+
+#CustomGame select {
+    padding: 30px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border-width: 5px;
+    border-style: solid;
+    color: #f0f0f0;
+    appearance: none;
+    text-align: center;
+    border-image: linear-gradient(to right, #FD3084, #5aae39, #fceb00, #009bde) 1;
+}
+
+#CustomGame select:focus {
+    outline: none;
+}
+
+#CustomGame select option {
+    font-size: 1.2rem;
+    border-style: solid;
+    color: black;
+    appearance: none;
+    text-align: center;
+}

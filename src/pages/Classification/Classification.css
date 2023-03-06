@@ -1,0 +1,58 @@
+#Classification {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+#Classification  h1{
+    color: rgb(255, 255, 255);
+    animation: flicker 2s infinite alternate;
+    font-size: 4rem;
+    margin-bottom:-1rem ;
+}
+
+#Classification  h3{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    margin: -1rem;
+}
+
+#Classification  p{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+}
+
+
+@keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #c501e2,
+            0 0 80px #c501e2,
+            0 0 90px #c501e2,
+            0 0 100px #c501e2,
+            0 0 150px #c501e2;
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}

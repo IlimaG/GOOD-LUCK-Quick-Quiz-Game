@@ -21,7 +21,6 @@ const SoundMusic = () => {
     return (
         <button id='sound-MuteMusic' onClick={() => controlMusic()}>
             <img src={audioImg} />
-
         </button>
     )
 }

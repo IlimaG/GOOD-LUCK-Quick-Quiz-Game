@@ -15,6 +15,7 @@ import CustomizeGame from './pages/CustomizeGame/CustomizeGame';
 import HomePage from './pages/HomePage/HomePage';
 import TrainingPopUp from './components/TrainingPopUp/TrainingPopUp';
 import CompetitivePopUp from './components/CompetitivePopUp/CompetitivePopUp';
+import { CustomizeGameContex, CustomizeGameContexProvider } from './contex/CustomizeGameContex';
 
 function App() {
 
@@ -23,21 +24,19 @@ function App() {
       <PointsContexProvider>
         <QuestionsContexProvider>
           <SettingsContexProvider>
+            <CustomizeGameContexProvider>
 
-            <SettingsPopUp />
-            <SoundMusic />
-            <TrainingPopUp />
-            <CompetitivePopUp />
-            <HowToPlayPopUp />
-            
-            <Routes>
-              <Route path='/' element={<HomePage />} />
-              <Route path='/custom' element={<CustomizeGame />} />
-              <Route path='/customGame' element={<CustomGame />} />
-              <Route path='/classicGame' element={<ClassicGame />} />
-              <Route path='/classification' element={<Classification />} />
-            </Routes>
+              <SoundMusic />
 
+              <Routes>
+                <Route path='/' element={<HomePage />} />
+                <Route path='/classicGame' element={<ClassicGame />} />
+                <Route path='/custom' element={<CustomizeGame />} />
+                <Route path='/customGame' element={<CustomGame />} />
+                <Route path='/classification' element={<Classification />} />
+              </Routes>
+
+            </CustomizeGameContexProvider>
           </SettingsContexProvider>
         </QuestionsContexProvider>
       </PointsContexProvider>

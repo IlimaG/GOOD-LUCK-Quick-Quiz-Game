@@ -1,20 +1,25 @@
 import arrayShuffle from 'array-shuffle';
 import axios from 'axios';
-import { useContext, useEffect, useState } from 'react';
+
 import Answer from '../../components/Answer/Answer';
 import Ask from '../../components/Ask/Ask';
 import ErrorCorrectAsk from '../../components/ErrorCorrectAsk/Error-CorrectAsk';
 import PointsCounter from '../../components/PointsCounter/PointsCounter';
 import Timer from '../../components/Timer/Timer';
+
+import { useContext, useEffect, useState } from 'react';
 import { QuestionsContex } from '../../contex/QuestionsContex';
 import { SettingsContex } from '../../contex/SettingsContex';
+import { useNavigate } from "react-router-dom";
+
 import './ClassicGame.css';
+import Logout from '../../components/Logout/Logout';
 
 const ClassicGame = () => {
 
-    const { setAllAnswer, setIsWinner, isTime, setIsTime, setPoints, isWinner, countDown } = useContext(QuestionsContex)
+    const { setAllAnswer, setIsWinner, isTime, setIsTime } = useContext(QuestionsContex)
     const { color1, color2, color3, color4 } = useContext(SettingsContex)
-
+    
     const [countAnswer, setCountAnswer] = useState(0)
     const [question, setQuestion] = useState('')
     const [answer1, setAnswer1] = useState('')
@@ -23,11 +28,10 @@ const ClassicGame = () => {
     const [answer4, setAnswer4] = useState('')
     const [correctAnswer, setcorrectAnswer] = useState('')
     const [type, setType] = useState('')
-
+    
     const [clickAnswer, setClickAnswer] = useState(0)
-
-
-
+    
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios
@@ -53,6 +57,7 @@ const ClassicGame = () => {
                                 answer: [e.correct_answer, ...e.incorrect_answers],
                                 correct_answer: e.correct_answer
                             }
+
                             all.push(formattedAsk)
                         }
                     }
@@ -152,7 +157,9 @@ const ClassicGame = () => {
                 setAnswer3(ramdonAnswers[2])
                 setAnswer4(ramdonAnswers[3])
             })
+
     }, [countAnswer])
+
 
     const setAnswers = () => {
 
@@ -231,8 +238,17 @@ const ClassicGame = () => {
 
     }
 
+    useEffect(() => {
+        if (countAnswer === 10) {
+             navigate("/classification");
+        }
+
+    }, [countAnswer])
     return (
         <div id='ClassicGame'>
+            
+            <Logout />
+
             <div className='infoGame'>
                 <PointsCounter />
 
@@ -247,8 +263,10 @@ const ClassicGame = () => {
                 correctOrError={clickAnswer}
                 countRound={countAnswer}
             />
+
+
             {setAnswers()}
-            
+
         </div>
 
     )

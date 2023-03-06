@@ -1,12 +1,13 @@
 import { createContext, useEffect, useState } from "react";
 import audioPrincipal from '../assets/audio/principal.mp3'
+
 const SettingsContex = createContext()
 
 const SettingsContexProvider = ({ children }) => {
 
     const [showSettings, setShowSettings] = useState('-110%')
 
-    const [muteMusic, setMuteMusic] = useState(true)
+    const [muteMusic, setMuteMusic] = useState(false)
     const [audio, setAudio] = useState(new Audio(audioPrincipal))
     const [musicVolume, setMusicVolume] = useState(0.45)
 
@@ -42,9 +43,6 @@ const SettingsContexProvider = ({ children }) => {
         controlVolume()
     }, [musicVolume])
 
-    useEffect(() => {
-        setMuteMusic(!muteMusic)
-    }, [audio])
 
     return (
         <SettingsContex.Provider

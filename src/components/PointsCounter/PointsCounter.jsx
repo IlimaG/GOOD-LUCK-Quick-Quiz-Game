@@ -1,11 +1,11 @@
 import { useContext } from 'react'
-import { QuestionsContex } from '../../contex/QuestionsContex'
+import { PointsContex } from '../../contex/PointsContex'
 import './PointsCounter.css'
 
 
 const PointsCounter = () => {
 
-    const { points } = useContext(QuestionsContex)
+    const { points } = useContext(PointsContex)
 
     return (
         <h3 id='PointsCounter'>Points: {points} </h3>

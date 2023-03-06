@@ -4,9 +4,10 @@ const PointsContex = createContext()
 
 const PointsContexProvider = ({ children }) => {
 
+    const [points, setPoints] = useState(0)
 
     return (
-        <PointsContex.Provider value={{}}>
+        <PointsContex.Provider value={{points, setPoints}}>
             {children}
         </PointsContex.Provider>
     )
