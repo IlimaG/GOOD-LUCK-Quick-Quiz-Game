@@ -4,6 +4,7 @@ import { QuestionsContex } from '../../contex/QuestionsContex'
 import CountdowSound from '../../assets/audio/CountdowSound.mp3'
 import './Timer.css'
 import { SettingsContex } from '../../contex/SettingsContex'
+import { CustomizeGameContex } from '../../contex/CustomizeGameContex'
 
 const Timer = (props) => {
 
@@ -11,8 +12,34 @@ const Timer = (props) => {
     const [color, setColor] = useState('white')
     const [timeOut, setTimeOut] = useState('white')
     const { setIsTime, countDown, setCountDown, isTime, isWinner } = useContext(QuestionsContex)
-    const { setPoints } = useContext(PointsContex)
+    const { setPoints, playerPoints1, setPlayerPoints1,
+        playerPoints2, setPlayerPoints2,
+        playerPoints3, setPlayerPoints3,
+        playerPoints4, setPlayerPoints4 } = useContext(PointsContex)
     const [countdowSound, setCountDownSound] = useState(new Audio(CountdowSound))
+
+    const {
+        numberQuestions, setNumberQuestions,
+        categorie, setCategorie,
+        difficulty, setDifficulty,
+        type, setType,
+        namePlayer1, setNamePlayer1,
+        namePlayer2, setNamePlayer2,
+        namePlayer3, setNamePlayer3,
+        namePlayer4, setNamePlayer4,
+        colorPlayer1, setColorPlayer1,
+        colorPlayer2, setColorPlayer2,
+        colorPlayer3, setColorPlayer3,
+        colorPlayer4, setColorPlayer4,
+        imgPlayer1, setImgPlayer1,
+        imgPlayer2, setImgPlayer2,
+        imgPlayer3, setImgPlayer3,
+        isLoadCompetitive, setIsLoadCompetitive, roundOf,
+        numberOsPlayers } = useContext(CustomizeGameContex)
+
+    useEffect(() => {
+        setCountDown(time)
+    }, [])
 
     useEffect(() => {
         const timer =
@@ -26,7 +53,7 @@ const Timer = (props) => {
             countdowSound.play()
         }
 
-    },[countDown])
+    }, [countDown])
 
     useEffect(() => {
         if (countDown === 0) {
@@ -44,7 +71,15 @@ const Timer = (props) => {
 
     useEffect(() => {
         setCountDown(time)
-        isWinner && setPoints(prev => prev + countDown)
+        if (isLoadCompetitive) {
+
+            isWinner && roundOf === 0 && setPlayerPoints1(prev => prev + countDown)
+            isWinner && roundOf === 1 && setPlayerPoints2(prev => prev + countDown)
+            isWinner && roundOf === 2 && setPlayerPoints3(prev => prev + countDown)
+            isWinner && roundOf === 3 && setPlayerPoints4(prev => prev + countDown)
+        } else {
+            isWinner && setPoints(prev => prev + countDown)
+        }
     }, [correctOrError])
 
     return (

@@ -28,19 +28,6 @@
     font-size: 3rem;
 }
 
-.classificationCompetitive section{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20%;
-}
-
-.classificationCompetitive img{
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-}
 
 @keyframes flicker {
     0%,

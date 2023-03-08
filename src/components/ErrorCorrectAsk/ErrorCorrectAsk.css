@@ -1,13 +1,43 @@
 #ErrorCorrectAsk {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     backdrop-filter: blur(10px);
     text-align: center;
     font-size: 100px;
     font-weight: 400;
     letter-spacing: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#ErrorCorrectAsk h1{
+    margin: 0;
+    position: absolute;
+    top: 0;
+}
+
+#ErrorCorrectAsk h1 span{
+    margin: 0;
+    max-width: 100%;
+    max-height: 20%;
+    color: #5aae39;
+    width: 100%;
+    font-size: 2rem;
+    animation: winner 1.5s infinite alternate;
+    font-family: 'Courier New', Courier, monospace;
+    margin: -20px;
+}
+
+#outOfTime {
+    color: #fceb00;
+    animation: autoftime 1.5s infinite alternate;
+
+}
+
+.correct_answer{
+ 
+}
 
 @keyframes incorrect {
     0%,
@@ -56,6 +86,34 @@
             0 0 90px #5aae39,
             0 0 100px #478a2d,
             0 0 150px #2e7114;
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes autoftime {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #fff9a5,
+            0 0 80px #fff34c,
+            0 0 90px #fceb00,
+            0 0 100px #c3b603,
+            0 0 150px #6b6400;
 
     }
 

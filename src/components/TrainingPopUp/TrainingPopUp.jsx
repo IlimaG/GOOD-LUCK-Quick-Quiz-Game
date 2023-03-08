@@ -16,7 +16,7 @@ const TrainingPopUp = () => {
                 </div>
 
                 <div className='btnPurple' onClick={() => setTrainingPopUp('-100%')}>
-                <Link to={'/customGame'}>CUSTOM GAME</Link>
+                <Link to={'/custom'}>CUSTOM GAME</Link>
                 </div>
                 
             </div>

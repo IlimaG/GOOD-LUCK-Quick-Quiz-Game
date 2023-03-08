@@ -16,6 +16,11 @@ import HomePage from './pages/HomePage/HomePage';
 import TrainingPopUp from './components/TrainingPopUp/TrainingPopUp';
 import CompetitivePopUp from './components/CompetitivePopUp/CompetitivePopUp';
 import { CustomizeGameContex, CustomizeGameContexProvider } from './contex/CustomizeGameContex';
+import ClassicGamePlayers from './pages/ClassicGamePlayers/ClassicGamePlayers';
+import ClassificationCompetitive from './pages/ClassificationCompetitive/Classification';
+import ClassicGameCompetitve from './pages/ClassicGameCompetitve/ClassicGameCompetitve';
+import CustomizeGameCompetitive from './pages/CustomizeGameCompetitive/CustomizeGameCompetitive';
+import CustomGameCompetitive from './pages/CustomGameCompetitive/CustomGameCompetitive';
 
 function App() {
 
@@ -30,10 +35,18 @@ function App() {
 
               <Routes>
                 <Route path='/' element={<HomePage />} />
+
                 <Route path='/classicGame' element={<ClassicGame />} />
                 <Route path='/custom' element={<CustomizeGame />} />
                 <Route path='/customGame' element={<CustomGame />} />
+
+                <Route path='/classicGamePlayers' element={<ClassicGamePlayers />} />
+                <Route path='/classicGameCopetitive' element={<ClassicGameCompetitve />} />
+                <Route path='/customizeGameCompetitive' element={<CustomizeGameCompetitive />} />
+                <Route path='/customGameCompetitive' element={<CustomGameCompetitive />} />
+
                 <Route path='/classification' element={<Classification />} />
+                <Route path='/classificationCompetitive' element={<ClassificationCompetitive />} />
               </Routes>
 
             </CustomizeGameContexProvider>

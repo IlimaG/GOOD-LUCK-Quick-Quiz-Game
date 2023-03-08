@@ -9,6 +9,7 @@ const ErrorCorrectAsk = (props) => {
     const [zIndex, setzIndex] = useState('-1')
     const [color, setcolor] = useState('')
     const [isCorectAnswer, setIsCorectAnswer] = useState('')
+    const { correctAnswer } = useContext(QuestionsContex)
 
     useEffect(() => {
         if (!correctOrError == 0) {
@@ -17,14 +18,14 @@ const ErrorCorrectAsk = (props) => {
             setTimeout(() => {
                 setzIndex('-1')
                 setOpacity('0')
-            }, 2000); 
+            }, 1300);
         }
 
         if (isWinner) {
-            setcolor('#5aae39')  
+            setcolor('#5aae39')
             setIsCorectAnswer('winner')
         } else {
-            setcolor('#d259e5')  
+            setcolor('#d259e5')
             setIsCorectAnswer('incorrect')
         }
     }, [correctOrError])
@@ -38,11 +39,17 @@ const ErrorCorrectAsk = (props) => {
             transition: 'all 2s ease',
             zIndex: zIndex
         }}>
-  
-                {isWinner && <h1>CORRECT <br/> ANSWER</h1>}
-                {!isWinner && isTime && <h1>INCORRECT <br/> ANSWER</h1>}
-                {!isTime  && <h1> OUT OF<br/> TIME</h1>}
-            
+
+            {isWinner && <h1>CORRECT <br /> ANSWER</h1>}
+
+            {!isWinner && isTime &&
+                <h1>INCORRECT <br /> ANSWER <br />
+                    <span id='correct_answer'>{correctAnswer}</span> </h1>
+            }
+            {!isTime && <h1 id='outOfTime'>
+                OUT OF<br /> TIME<br />
+                <span id='correct_answer'>{correctAnswer}</span> </h1>}
+
         </div>
     )
 

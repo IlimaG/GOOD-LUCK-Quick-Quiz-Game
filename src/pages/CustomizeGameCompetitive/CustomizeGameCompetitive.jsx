@@ -3,11 +3,11 @@ import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ClassicButton from '../../components/ClassicButton/ClassicButton';
 import ControlQuestionCustom from '../../components/ControlQuestionCustom/ControlQuestionCustom';
-import Logout from '../../components/Logout/Logout';
+import PlayerCard from '../../components/PlayerCard/PlayerCard';
 import { CustomizeGameContex } from '../../contex/CustomizeGameContex';
-import './CustomizeGame.css';
+import './CustomizeGameCompetitive.css';
 
-const CustomizeGame = () => {
+const CustomizeGameCompetitive = () => {
 
     const [categories, setCategories] = useState([])
     const { setNumberQuestions, setCategorie, setType, setDifficulty, numberQuestions } = useContext(CustomizeGameContex)
@@ -16,7 +16,6 @@ const CustomizeGame = () => {
     const handleCategoriesInput = (e) => setCategorie(e.target.value)
     const handleTypeInput = (e) => setType(e.target.value)
     const handleDifficultyInput = (e) => setDifficulty(e.target.value)
-    const [keyPressed, setKeyPressed] = useState('')
 
     const navigate = useNavigate();
 
@@ -24,37 +23,20 @@ const CustomizeGame = () => {
         axios
             .get('https://opentdb.com/api_category.php')
             .then(response => setCategories(response.data.trivia_categories))
+
+
     }, [])
 
-    
-
-    function onKeyDownHandler(event) {
-        document.addEventListener("keydown", e => {
-            let keyName = e.keyCode === 32 ? "Space" : e.key;
-            setKeyPressed(keyName)
-        });
-
-    }
-
-    useEffect(() => {
-        if (keyPressed === 'Enter') {
-            navigate('/customGame')
-        }
-    }, [keyPressed])
-
     return (
-        <>
-        <Logout />
-            <div id='customgame1' onKeyDown={onKeyDownHandler()}>
+        <div>
+            <ControlQuestionCustom />
+           
 
-                <ControlQuestionCustom />
-
-
+            <div id='PlayerCardCustom'>
+                <PlayerCard url='/customGameCompetitive'/>
             </div>
-                <h1 className='neonTex2'>PRESS ENTER TO PLAY</h1>
-        </>
-
+        </div>
     )
 }
 
-export default CustomizeGame
+export default CustomizeGameCompetitive

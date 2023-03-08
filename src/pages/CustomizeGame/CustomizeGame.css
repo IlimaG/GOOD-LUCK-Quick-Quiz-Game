@@ -1,0 +1,14 @@
+#CustomGameCompetitive {
+top: 20px;
+text-align: center;
+}
+
+.neonTex2{
+    color: rgb(104, 24, 157);
+    position: absolute;
+    top: 100px;
+    right: 41%;
+    left: 41%;
+    animation: flicker 3s infinite alternate;
+
+}

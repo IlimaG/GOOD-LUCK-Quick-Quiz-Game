@@ -1,52 +1,81 @@
 import axios from 'axios';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import ClassicButton from '../../components/ClassicButton/ClassicButton';
+import ErrorCorrectAsk from '../../components/ErrorCorrectAsk/Error-CorrectAsk';
+import Logout from '../../components/Logout/Logout';
+import OrderQuestions from '../../components/OrderQuestions/OrderQuestions';
+import PointsCounter from '../../components/PointsCounter/PointsCounter';
+import Timer from '../../components/Timer/Timer';
 import { CustomizeGameContex } from '../../contex/CustomizeGameContex';
+import { QuestionsContex } from '../../contex/QuestionsContex';
+import arrayShuffle from 'array-shuffle';
 import './CustomGame.css';
 
 const CustomGame = () => {
 
-    const [categories, setCategories] = useState([])
-    const { setNumberQuestions, setCategorie, setType, setDifficulty} = useContext(CustomizeGameContex)
+    const { numberQuestions, categorie, type, difficulty } = useContext(CustomizeGameContex)
+    const { setAllAnswer, countAnswer, clickAnswer } = useContext(QuestionsContex)
 
-    const handleNumberQuestionsInput = (e) => setNumberQuestions(e.target.value)
-    const handleCategoriesInput = (e) => setCategorie(e.target.value)
-    const handleTypeInput = (e) => setType(e.target.value)
-    const handleDifficultyInput = (e) => setDifficulty(e.target.value)
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        const baseUrl = `https://opentdb.com/api.php?amount=${numberQuestions}&category=${categorie}&difficulty=${difficulty}&type=${type}`
+        
+        axios
+            .get(baseUrl)
+            .then(response => {
+                const answers = response.data.results
+
+                let all = []
+                let formattedAsk = {}
 
 
-    axios
-        .get('https://opentdb.com/api_category.php')
-        .then(response => setCategories(response.data.trivia_categories))
+                const easyMultiple = answers.forEach((e) => {
+                    
+                        formattedAsk = {
+                            question: e.question,
+                            category: e.category,
+                            type: e.type,
+                            difficulty: e.difficulty,
+                            answer: [e.correct_answer, ...e.incorrect_answers],
+                            correct_answer: e.correct_answer
+                        }
+
+                        all.push(formattedAsk)
+                    
+                })
+
+                setAllAnswer(all)
+
+            })
+    }, [])
+
 
     return (
-        <form id='CustomGame'>
+        <div id='ClassicGame'>
 
-            <label htmlFor="numberQuestions">Number of Questions</label>
-            <input type='number' id='numberQuestions' defaultValue={10} min={1} max={50} onChange={handleNumberQuestionsInput} />
+            <Logout />
 
-            <select name="Categories" id="Categories" onChange={handleCategoriesInput}>
-                <option value=''>All categories</option>
-                {categories.map((cat) => {
-                    return <option key={cat.id} value={cat.id}>{cat.name}</option>
-                })}
-            </select>
+            <div className='infoGame'>
+                <PointsCounter />
 
-            <select name="typeQuestions" id="" onChange={handleTypeInput}>
-                <option value=''>Type ramdom</option>
-                <option value='multiple'>Multiple Choice</option>
-                <option value='boolean'>True / False</option>
-            </select>
+                <Timer
+                    time={30}
+                    correctOrError={countAnswer}
+                />
 
-            <select name="Difficulty" id="Difficulty" onChange={handleDifficultyInput}>
-                <option value=''>Difficulty ramdom</option>
-                <option value='easy'>Easy</option>
-                <option value='medium'>Medium</option>
-                <option value='hard'>Hard</option>
-            </select>
-            
+            </div>
 
-            <button>PLAY</button>
-        </form>
+            <ErrorCorrectAsk
+                correctOrError={clickAnswer}
+                countRound={countAnswer}
+            />
+
+            <OrderQuestions />
+
+        </div>
+
     )
 }
 
