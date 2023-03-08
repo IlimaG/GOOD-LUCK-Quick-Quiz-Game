@@ -19,25 +19,7 @@ import ControlRounds from '../../components/ControlRounds/ControlRounds';
 const ClassicGameCompetitve = () => {
 
     const { setAllAnswer, allAnswer, countAnswer, clickAnswer } = useContext(QuestionsContex)
-    const {
-        numberQuestions, setNumberQuestions,
-        categorie, setCategorie,
-        difficulty, setDifficulty,
-        type, setType,
-        namePlayer1, setNamePlayer1,
-        namePlayer2, setNamePlayer2,
-        namePlayer3, setNamePlayer3,
-        namePlayer4, setNamePlayer4,
-        colorPlayer1, setColorPlayer1,
-        colorPlayer2, setColorPlayer2,
-        colorPlayer3, setColorPlayer3,
-        colorPlayer4, setColorPlayer4,
-        imgPlayer1, setImgPlayer1,
-        imgPlayer2, setImgPlayer2,
-        imgPlayer3, setImgPlayer3,
-        isLoadCompetitive, setIsLoadCompetitive,
-        numberOsPlayers,
-        nextRound, setNextRound } = useContext(CustomizeGameContex)
+    const { setNumberQuestions, isLoadCompetitive, setIsLoadCompetitive, numberOsPlayers} = useContext(CustomizeGameContex)
 
     const [loadQuestion1, setLoadQuestion1] = useState(false)
     const [loadQuestion2, setLoadQuestion2] = useState(false)

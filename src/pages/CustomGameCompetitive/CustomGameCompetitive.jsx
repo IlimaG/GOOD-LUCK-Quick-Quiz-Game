@@ -1,12 +1,10 @@
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import ControlRounds from '../../components/ControlRounds/ControlRounds';
 import ErrorCorrectAsk from '../../components/ErrorCorrectAsk/Error-CorrectAsk';
 import Loader from '../../components/Loader/Loader';
 import Logout from '../../components/Logout/Logout';
 import OrderQuestions from '../../components/OrderQuestions/OrderQuestions';
-import PointsCounter from '../../components/PointsCounter/PointsCounter';
 import PointsCounterCompetitive from '../../components/PointsCounterCompetitive/PointsCounterCompetitive';
 import Timer from '../../components/Timer/Timer';
 import { CustomizeGameContex } from '../../contex/CustomizeGameContex';
@@ -15,35 +13,14 @@ import './CustomGameCompetitive.css';
 
 const CustomGameCompetitive = () => {
 
-    const { setAllAnswer, allAnswer, countAnswer, clickAnswer } = useContext(QuestionsContex)
+    const { setAllAnswer,  countAnswer, clickAnswer } = useContext(QuestionsContex)
 
     const {
         numberQuestions, setNumberQuestions,
-        categorie, setCategorie,
-        difficulty, setDifficulty,
-        type, setType,
-        namePlayer1, setNamePlayer1,
-        namePlayer2, setNamePlayer2,
-        namePlayer3, setNamePlayer3,
-        namePlayer4, setNamePlayer4,
-        colorPlayer1, setColorPlayer1,
-        colorPlayer2, setColorPlayer2,
-        colorPlayer3, setColorPlayer3,
-        colorPlayer4, setColorPlayer4,
-        imgPlayer1, setImgPlayer1,
-        imgPlayer2, setImgPlayer2,
-        imgPlayer3, setImgPlayer3,
+        categorie, difficulty,  type, 
         isLoadCompetitive, setIsLoadCompetitive,
-        numberOsPlayers, setNumberOfPlayers,
-        nextRound, setNextRound } = useContext(CustomizeGameContex)
-
-    const [loadQuestion1, setLoadQuestion1] = useState(false)
-    const [loadQuestion2, setLoadQuestion2] = useState(false)
-    const [loadQuestion3, setLoadQuestion3] = useState(false)
-    const [loadQuestion4, setLoadQuestion4] = useState(false)
-    const [loadQuestion5, setLoadQuestion5] = useState(false)
-
-
+        numberOsPlayers, 
+         } = useContext(CustomizeGameContex)
 
     useEffect(() => { // Easy multiple x 2
 

@@ -7,7 +7,7 @@ const ClassicButton = (props) => {
     // colors : .btnPink, .btnGreen, .btnYellow, .btnBlue
 
     return (
-        <button className={color} onClick={props.onClickButton}> {text}</button>
+        <button id='btn' className={`btn ${color}`} onClick={props.onClickButton}> {text}</button>
     )
 }
 

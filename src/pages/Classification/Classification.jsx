@@ -1,9 +1,8 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import ClassicButton from '../../components/ClassicButton/ClassicButton';
 import { CustomizeGameContex } from '../../contex/CustomizeGameContex';
 import { PointsContex } from '../../contex/PointsContex';
-import { QuestionsContex } from '../../contex/QuestionsContex';
 import './Classification.css';
 
 const Classification = () => {
@@ -17,27 +16,15 @@ const Classification = () => {
 
     const {
         isLoadCompetitive, setIsLoadCompetitive,
-        numberQuestions, setNumberQuestions,
-        categorie, setCategorie,
-        difficulty, setDifficulty,
-        type, setType,
-        namePlayer1, setNamePlayer1,
-        namePlayer2, setNamePlayer2,
-        namePlayer3, setNamePlayer3,
-        namePlayer4, setNamePlayer4,
-        colorPlayer1, setColorPlayer1,
-        colorPlayer2, setColorPlayer2,
-        colorPlayer3, setColorPlayer3,
-        colorPlayer4, setColorPlayer4,
-        imgPlayer1, setImgPlayer1,
-        imgPlayer2, setImgPlayer2,
-        imgPlayer3, setImgPlayer3,
-        imgPlayer4, setImgPlayer4,
-        isPlayer1, setIsPlayer1,
-        isPlayer2, setIsPlayer2,
-        isPlayer3, setIsPlayer3,
-        isPlayer4, setIsPlayer4,
-        numberOsPlayers } = useContext(CustomizeGameContex)
+        setNumberQuestions, namePlayer1,
+        namePlayer2, namePlayer3,
+        namePlayer4, colorPlayer1,
+        colorPlayer2, colorPlayer3,
+        colorPlayer4, imgPlayer1,
+        imgPlayer2, imgPlayer3,
+        imgPlayer4, isPlayer1,
+        isPlayer2, isPlayer3,
+        isPlayer4, } = useContext(CustomizeGameContex)
 
     const navigate = useNavigate();
 
@@ -168,11 +155,11 @@ const Classification = () => {
                     </div>
                 </>}
 
-            {isLoadCompetitive && <ClassicButton color='btnYellow' text='REPEAT GAME' onClickButton={repeatGame}/>  }
-            {isLoadCompetitive && <ClassicButton color='btnBlue' text={<Link to={`/customizeGameCompetitive`}>ADJUST GAME</Link>} />  }
+            {isLoadCompetitive && <ClassicButton color='btnYellow' text='REPEAT GAME' onClickButton={repeatGame} />}
+            {isLoadCompetitive && <ClassicButton color='btnBlue' text={<Link to={`/customizeGameCompetitive`}>ADJUST GAME</Link>} />}
 
             {!isLoadCompetitive && <ClassicButton color='btnYellow' text='REPEAT GAME' onClickButton={repeatGame} />}
-            {!isLoadCompetitive && <ClassicButton color='btnBlue' text={<Link to={`/custom`}>ADJUST GAME</Link>}   />}
+            {!isLoadCompetitive && <ClassicButton color='btnBlue' text={<Link to={`/custom`}>ADJUST GAME</Link>} />}
 
             <ClassicButton color='btnGreen' text='BACK TO HOME' onClickButton={goToHome} />
         </div>

@@ -1,7 +1,5 @@
-import { useContext, useEffect, useState } from 'react'
-import ClassicButton from '../../components/ClassicButton/ClassicButton'
+import {  useState } from 'react'
 import PlayerCard from '../../components/PlayerCard/PlayerCard'
-import { CustomizeGameContex } from '../../contex/CustomizeGameContex'
 import './ClassicGamePlayers.css'
 
 const ClassicGamePlayers = () => {

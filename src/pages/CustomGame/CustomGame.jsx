@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ClassicButton from '../../components/ClassicButton/ClassicButton';
 import ErrorCorrectAsk from '../../components/ErrorCorrectAsk/Error-CorrectAsk';
 import Logout from '../../components/Logout/Logout';
 import OrderQuestions from '../../components/OrderQuestions/OrderQuestions';
@@ -9,7 +8,6 @@ import PointsCounter from '../../components/PointsCounter/PointsCounter';
 import Timer from '../../components/Timer/Timer';
 import { CustomizeGameContex } from '../../contex/CustomizeGameContex';
 import { QuestionsContex } from '../../contex/QuestionsContex';
-import arrayShuffle from 'array-shuffle';
 import './CustomGame.css';
 
 const CustomGame = () => {

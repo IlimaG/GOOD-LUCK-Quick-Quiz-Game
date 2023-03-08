@@ -20,15 +20,15 @@ const Ask = (props) => {
     const textStyle = isHover ? `${rgba}` : '#e8e8e8'
 
     return (
-        <div className="card"
+        <div className="cardAks"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{
-                border: `2px solid ${rgba}`,
-                boxShadow: `2px 2px 15px ${boxStyle} inset`,
+                border: `5px solid ${rgba}`,
+                boxShadow: `2px 2px 15px white inset`,
             }}
         >
-            <div className="card-info"
+            <div className="cardAks-info"
                 style={{
                     color: textStyle
                 }}>

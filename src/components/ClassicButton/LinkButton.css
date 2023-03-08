@@ -1,5 +1,7 @@
 /* COLOR PINK */
-
+.btn {
+    cursor: pointer;
+}
 .btnPink {
     padding: 0.8em 2em 0.8em 2.5em;
     font-size: 1em;

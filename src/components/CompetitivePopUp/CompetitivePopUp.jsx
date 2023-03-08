@@ -1,24 +1,37 @@
 import { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { QuestionsContex } from '../../contex/QuestionsContex'
 import './CompetitivePopUp.css'
 
 const CompetitivePopUp = () => {
 
-    const {competitivePopUp, setCompetitivePopUp}= useContext(QuestionsContex)
+    const { competitivePopUp, setCompetitivePopUp } = useContext(QuestionsContex)
+
+    const navigate = useNavigate()
+
+    const gotClassicGame = () => {
+        setCompetitivePopUp('-100%')
+        navigate('/classicGamePlayers')
+    }
+
+    const gotCustomClassicGame = () => {
+        setCompetitivePopUp('-100%')
+        navigate('/customizeGameCompetitive')
+    }
 
     return (
         <div id='CompetitivePopUp' style={{ left: competitivePopUp }}>
             <button onClick={() => setCompetitivePopUp('-100%')}>X</button>
             <div id='CompetitivePopUpBtn'>
-                <div className='btnPurple' onClick={() => setCompetitivePopUp('-100%')}>
-                <Link to={'/classicGamePlayers'}>CLASSIC GAME</Link>
+                
+                <div className='btn btnPurple' onClick={() => gotClassicGame()}>
+                    CLASSIC GAME
                 </div>
 
-                <div className='btnPurple' onClick={() => setCompetitivePopUp('-100%')}>
-                <Link to={'/customizeGameCompetitive'}>CUSTOM GAME</Link>
+                <div className='btn btnPurple' onClick={() => gotCustomClassicGame()}>
+                    CUSTOM GAME
                 </div>
-                
+
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ import { QuestionsContex } from '../../contex/QuestionsContex'
 import './ErrorCorrectAsk.css'
 
 const ErrorCorrectAsk = (props) => {
-    const { countRound, correctOrError } = props
+    const { correctOrError } = props
     const { isWinner, isTime } = useContext(QuestionsContex)
     const [opacity, setOpacity] = useState('0')
     const [zIndex, setzIndex] = useState('-1')

@@ -7,33 +7,22 @@ import './PointsCounterCompetitive.css'
 const PointsCounterCompetitive = () => {
 
     const {
-        playerPoints1, setPlayerPoints1,
-        playerPoints2, setPlayerPoints2,
-        playerPoints3, setPlayerPoints3,
-        playerPoints4, setPlayerPoints4 } = useContext(PointsContex)
+        playerPoints1, 
+        playerPoints2, 
+        playerPoints3, 
+        playerPoints4, } = useContext(PointsContex)
 
     const {
-        numberQuestions, setNumberQuestions,
-        categorie, setCategorie,
-        difficulty, setDifficulty,
-        type, setType,
-        namePlayer1, setNamePlayer1,
-        namePlayer2, setNamePlayer2,
-        namePlayer3, setNamePlayer3,
-        namePlayer4, setNamePlayer4,
-        colorPlayer1, setColorPlayer1,
-        colorPlayer2, setColorPlayer2,
-        colorPlayer3, setColorPlayer3,
-        colorPlayer4, setColorPlayer4,
-        imgPlayer1, setImgPlayer1,
-        imgPlayer2, setImgPlayer2,
-        imgPlayer3, setImgPlayer3,
-        imgPlayer4, setImgPlayer4,
-        isPlayer1, setIsPlayer1,
-        isPlayer2, setIsPlayer2,
-        isPlayer3, setIsPlayer3,
-        isPlayer4, setIsPlayer4,
-        numberOsPlayers } = useContext(CustomizeGameContex)
+        
+        namePlayer1,namePlayer2, 
+        namePlayer3, namePlayer4, 
+        colorPlayer1, colorPlayer2, 
+        colorPlayer3, colorPlayer4, 
+        imgPlayer1, imgPlayer2, 
+        imgPlayer3, imgPlayer4, 
+        isPlayer1, isPlayer2, 
+        isPlayer3, isPlayer4, 
+         } = useContext(CustomizeGameContex)
 
 
     return (

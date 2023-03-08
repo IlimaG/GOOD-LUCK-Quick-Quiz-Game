@@ -44,6 +44,10 @@
     color: #d259e5;
 }
 
+#HowToPlayPopUpInfo h4{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 
 #CompetitiveInfo{
     color: #5aae39;

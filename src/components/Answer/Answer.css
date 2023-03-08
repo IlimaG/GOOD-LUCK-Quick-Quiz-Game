@@ -9,8 +9,16 @@
     font-family: 'Pacifico';
     border-radius: 20px;
     font-size: 1.4rem;
+    
+  }
+
+  .card:hover {
+    cursor: pointer;
+    
   }
   .card-info {
+    cursor: pointer;
+
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,15 +1,11 @@
-import arrayShuffle from 'array-shuffle';
 import axios from 'axios';
 
-import Answer from '../../components/Answer/Answer';
-import Ask from '../../components/Ask/Ask';
 import ErrorCorrectAsk from '../../components/ErrorCorrectAsk/Error-CorrectAsk';
 import PointsCounter from '../../components/PointsCounter/PointsCounter';
 import Timer from '../../components/Timer/Timer';
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect} from 'react';
 import { QuestionsContex } from '../../contex/QuestionsContex';
-import { SettingsContex } from '../../contex/SettingsContex';
 
 
 import './ClassicGame.css';

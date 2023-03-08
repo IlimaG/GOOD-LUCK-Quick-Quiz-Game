@@ -8,30 +8,16 @@ const ControlRounds = (props) => {
     const { control } = props
 
     const {
-        numberQuestions, setNumberQuestions,
-        categorie, setCategorie,
-        difficulty, setDifficulty,
-        type, setType,
-        namePlayer1, setNamePlayer1,
-        namePlayer2, setNamePlayer2,
-        namePlayer3, setNamePlayer3,
-        namePlayer4, setNamePlayer4,
-        colorPlayer1, setColorPlayer1,
-        colorPlayer2, setColorPlayer2,
-        colorPlayer3, setColorPlayer3,
-        colorPlayer4, setColorPlayer4,
-        imgPlayer1, setImgPlayer1,
-        imgPlayer2, setImgPlayer2,
-        imgPlayer3, setImgPlayer3,
-        imgPlayer4, setImgPlayer4,
-        isLoadCompetitive, setIsLoadCompetitive,
-        numberOsPlayers,isPlayer1,isPlayer2,isPlayer3,isPlayer4,
-        nextRound, setNextRound,
-        roundOf, setRoundOf } = useContext(CustomizeGameContex)
+        namePlayer1, namePlayer2, 
+        namePlayer3, namePlayer4, 
+        colorPlayer1, colorPlayer2, 
+        colorPlayer3, colorPlayer4, 
+        imgPlayer1, imgPlayer2, 
+        imgPlayer3, imgPlayer4, 
+        numberOsPlayers, setRoundOf } = useContext(CustomizeGameContex)
 
-    const { setAllAnswer, allAnswer, countAnswer, clickAnswer, isTime } = useContext(QuestionsContex)
+    const { countAnswer } = useContext(QuestionsContex)
 
-    // const [isPlayersArr, setIsPlayersArr] = useState([isPlayer1, isPlayer2, isPlayer3, isPlayer4])
     const [namePlayers, setNamePlayers] = useState([namePlayer1, namePlayer2, namePlayer3, namePlayer4])
     const [colorPlayers, setColorPlayers] = useState([colorPlayer1, colorPlayer2, colorPlayer3, colorPlayer4])
     const [imgPlayers, setImgPlayers] = useState([imgPlayer1, imgPlayer2, imgPlayer3, imgPlayer4])

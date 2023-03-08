@@ -1,11 +1,11 @@
 import './SettingsPopUp.css'
 import { SettingsContex } from '../../contex/SettingsContex';
-import { useContext, useState } from 'react';
-import Ask from '../Ask/Ask';
+import { useContext } from 'react';
 import audioPrincipal from '../../assets/audio/principal.mp3'
 import audioGuitar from '../../assets/audio/guitar.mp3'
 import audioHipHop from '../../assets/audio/HipHop.mp3'
 import audiaFlute from '../../assets/audio/flauta.mp3'
+import Answer from '../Answer/Answer';
 
 
 const SettingsPopUp = () => {
@@ -39,7 +39,7 @@ const SettingsPopUp = () => {
 
     return (
         <div id='SettingsPopUp' style={{ top: `${showSettings}` }}>
-            <button id='closeSettings' onClick={() => closeSEttings()}>X</button>
+            <button id='closeSettinnswer' onClick={() => closeSEttings()}>X</button>
             <div id='musicSettings'>
                 <div className='muteMusic'>
                     <label htmlFor="musicVolume">Music volume</label>
@@ -75,22 +75,25 @@ const SettingsPopUp = () => {
             <div id='cardColorsScroll'>
                 <div id='cardsColors'>
 
-                    <Ask
+                    <Answer
+
                         rgba={color1}
                         text={<input type='color' id="color1" defaultValue={color1} onChange={handleColor1Input} />}
                         text2='Avocados are a fruit, not a vegetable'
                     />
-                    <Ask
+                    <Answer
+
                         rgba={color2}
                         text={<input type='color' id="color2" defaultValue={color2} onChange={handleColor2Input} />}
                         text2='The Eiffel Tower may be 15 cm taller during the summer'
                     />
-                    <Ask
+                    <Answer
+
                         rgba={color3}
                         text={<input type='color' id="color3" defaultValue={color3} onChange={handleColor3Input} />}
                         text2='The Spice Girls were originally called Touch'
                     />
-                    <Ask
+                    <Answer
                         rgba={color4}
                         text={<input type='color' id="color4" defaultValue={color4} onChange={handleColor4Input} />}
                         text2={`In 2014, there was a Tinder 'match' in Antarctica`}
@@ -98,12 +101,14 @@ const SettingsPopUp = () => {
                 </div>
 
                 <div id='colorTrueFalse'>
-                    <Ask
+                    <Answer
+
                         rgba={trueColor}
                         text={<input type='color' id="color1" defaultValue={trueColor} onChange={handleTrueColorInput} />}
                         text2='TRUE'
                     />
-                    <Ask
+                    <Answer
+
                         rgba={falseColor}
                         text={<input type='color' id="color2" defaultValue={falseColor} onChange={handleFalseColor4Input} />}
                         text2='FALSE'

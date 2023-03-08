@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ClassicButton from '../../components/ClassicButton/ClassicButton';
 import ControlQuestionCustom from '../../components/ControlQuestionCustom/ControlQuestionCustom';
 import PlayerCard from '../../components/PlayerCard/PlayerCard';
 import { CustomizeGameContex } from '../../contex/CustomizeGameContex';

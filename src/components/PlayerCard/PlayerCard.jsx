@@ -33,7 +33,7 @@ const PlayerCard = (props) => {
         imgPlayer2, setImgPlayer2,
         imgPlayer3, setImgPlayer3,
         imgPlayer4, setImgPlayer4,
-        numberOsPlayers, setNumberOfPlayers,
+        setNumberOfPlayers,
         isPlayer1, setIsPlayer1,
         isPlayer2, setIsPlayer2,
         isPlayer3, setIsPlayer3,
@@ -121,7 +121,7 @@ const PlayerCard = (props) => {
 
     return (
         <>
-        <Logout />
+            <Logout />
             <div className="content"
                 style={{
                     border: `2px solid ${colorPlayer1}`,
