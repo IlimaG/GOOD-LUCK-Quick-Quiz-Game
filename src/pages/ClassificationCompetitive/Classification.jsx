@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import {  useNavigate } from 'react-router-dom';
 import ClassicButton from '../../components/ClassicButton/ClassicButton';
 import { CustomizeGameContex } from '../../contex/CustomizeGameContex';
@@ -5,6 +6,7 @@ import { PointsContex } from '../../contex/PointsContex';
 import './ClassificationCompetitive.css';
 
 const ClassificationCompetitive = () => {
+
 
     const { points } = useContext(PointsContex)
     const { setNumberQuestions } = useContext(CustomizeGameContex)
